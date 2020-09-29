@@ -10897,5 +10897,49 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+
+  .bg-purple{
+      background-color: #971ac2;
+  }
+
+  .bg-lpurple{
+      background-color: #be8fce;
+  }
+
+  form {
+      background-color: #971ac2;
+  }
+
+  .btn-white{
+      background-color: white;
+  }
+
+  .font-white{
+      color: white !important;
+      font-weight: bold;
+  }
+
+  .navbar-custom{
+      background-color: #971ac2;
+  }
+
+  /*change the brand and text color*/
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-text{
+      color: white;
+      font-weight: bold;
+  }
+
+  /*change the link color */
+  .navbar-custom .navbar-nav .nav-link
+  {
+      font-weight: bold;
+      color: white;
+  }
+  /*change the color of active or hovered links */
+  .navbar-custom .nav-item.active .nav-link, .navbar-custom .nav-item:hover .nav-link {
+      color: white;
+  /*change the brand and text color*/
+  }
 }
 
