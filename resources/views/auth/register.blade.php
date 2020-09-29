@@ -95,7 +95,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="estoquista" class="col-md-4 col-form-label text-md-right">Estoquista</label>
+                                            <label for="estoquista" class="col-md-200 col-form-label text-md-right">Estoquista</label>
                                             <input class= "form-control" type="radio" id="estoquista" name="cadastro" value="estoquista">
                                         </div>
 
