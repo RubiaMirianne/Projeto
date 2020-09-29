@@ -88,7 +88,6 @@
 
                                     <form method="POST" action="{{ route('register') }}">
                                         @csrf
-
                                         <div class="form-group row">
                                             <label for="vendedor" class="col-md-4 col-form-label text-md-right">{{ __('Vendedor') }}</label>
 
@@ -97,11 +96,12 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <input type="radio" id="estoquista" name="estoquista" value="estoquista">
-                                        </div>
                                         <div class="form-group row">
                                             <label for="estoquista" class="col-md-4 col-form-label text-md-right">{{ __('Estoquista') }}</label>
+
+                                            <div class="col-md-6">
+                                                <input type="radio" id="estoquista" name="estoquista" value="estoquista">
+                                            </div>
                                         </div>
 
                                         <div class="form-group row">
