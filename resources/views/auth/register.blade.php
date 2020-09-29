@@ -84,7 +84,7 @@
                                 <div class="card cd col-12">
                                 <div class="card-header">{{ __('Cadastro') }}</div>
 
-                                <div class="card cd col-12">
+
                                     <form method="POST" action="{{ route('register') }}">
                                         @csrf
 
