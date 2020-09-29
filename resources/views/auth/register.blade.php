@@ -83,7 +83,7 @@
 
                         <div class="col-md-8">
                                 <div class="card cd col-12">
-                                <div class="text-center" class="col-md-200" >{{ __('Cadastro') }}</div>
+                                <div class="text-center" >{{ __('CADASTRO') }}</div>
 
 
                                     <form method="POST" action="{{ route('register') }}">
