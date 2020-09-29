@@ -50,6 +50,9 @@
             .text-center {
                  text-align: center !important;
             }
+            .font-weight-bold {
+                  font-weight: 700 !important;
+            }
         </style>
     </head>
 
@@ -83,7 +86,7 @@
 
                         <div class="col-md-8">
                                 <div class="card cd col-12">
-                                <div class="text-center">{{ __('Cadastro') }}</div>
+                                <div class="text-center" class="font-weigth-bold">{{ __('Cadastro') }}</div>
 
 
                                     <form method="POST" action="{{ route('register') }}">
