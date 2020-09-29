@@ -44,7 +44,7 @@
 
             .title {
                 text-align:Left;
-                font-size: 3.5em;
+                font-size: 5.5em;
                 padding-top:1.5em;
             }
 
