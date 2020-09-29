@@ -81,7 +81,7 @@
 
                         <div class="col-md-8">
                             <div class="card">
-                                <div class="card-header">{{ __('Register') }}</div>
+                                <div class="card-header">{{ __('Cadastro') }}</div>
 
                                 <div class="card cd col-12">
                                     <form method="POST" action="{{ route('register') }}">
