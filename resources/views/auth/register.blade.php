@@ -90,12 +90,12 @@
                                     <form method="POST" action="{{ route('register') }}">
                                         @csrf
                                         <div class="form-group row">
-                                            <label for="vendedor" class="form-control">Vendedor</label>
+                                            <label for="vendedor">Vendedor</label>
                                             <input type="radio" id="vendedor" name="cadastro" value="vendedor" default>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="estoquista" class="form-control">Estoquista</label>
+                                            <label for="estoquista">Estoquista</label>
                                             <input type="radio" id="estoquista" name="cadastro" value="estoquista">
                                         </div>
 
