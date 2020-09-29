@@ -58,7 +58,7 @@
     <nav class="navbar navbar-dark bg-faded navbar-expand-md " style="background-color: #971ac2; border-color: #000;">
 
     <a class="navbar-brand" href="#">
-        <img src="Imagens/aa.png" alt="logo" height="36" width="90">
+        <img src="imagem/aa.png" alt="logo" height="36" width="90">
         </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
