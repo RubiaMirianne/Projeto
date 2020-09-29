@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
         <title>Financeiro</title>
 
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-       
+
         <style>
             html, body {
                 background-color: #fff;
@@ -47,6 +47,10 @@
                 font-size: 3.5em;
                 padding-top:1.5em;
             }
+            .text-center {
+                 text-align: center !important;
+            }
+
 
         </style>
     </head>
@@ -86,7 +90,7 @@
                 </ul>
             </div>
             </nav>
-        
+
 
             <div class="content form-group row" style="padding: 5em;">
 
