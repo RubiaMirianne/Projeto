@@ -91,12 +91,12 @@
                                         @csrf
                                         <div class="form-group row">
                                             <label for="vendedor" class="form-control">Vendedor</label>
-                                            <input class="col-md-4 col-form-label text-md-right" type="radio" id="vendedor" name="cadastro" value="vendedor">default
+                                            <input type="radio" id="vendedor" name="cadastro" value="vendedor" default>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="estoquista" class="form-control">Estoquista</label>
-                                            <input class="col-md-4 col-form-label text-md-right" type="radio" id="estoquista" name="cadastro" value="estoquista">
+                                            <input type="radio" id="estoquista" name="cadastro" value="estoquista">
                                         </div>
 
                                         <div class="form-group row">
