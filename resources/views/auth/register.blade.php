@@ -1,3 +1,4 @@
+@extends('layouts.app')
 
 @section('content')
  <nav class="navbar navbar-dark bg-faded navbar-expand-md " style="background-color: #971ac2; border-color: #000;">

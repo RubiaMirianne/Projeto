@@ -75,7 +75,6 @@
                     </div>
                 @endif
                 </div>
-            </div>
-        </div>
+    </nav>
     </body>
 </html>
