@@ -50,9 +50,7 @@
             .text-center {
                  text-align: center !important;
             }
-            .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-                 background-color: rgba(201, 10, 175, 0.5);
-           }
+
         </style>
     </head>
 
@@ -60,7 +58,7 @@
     <nav class="navbar navbar-dark bg-faded navbar-expand-md " style="background-color: #971ac2; border-color: #000;">
 
     <a class="navbar-brand" href="#">
-        <img src="img/aa.png" alt="logo" height="36" width="90">
+        <img src="Imagens/aa.png" alt="logo" height="36" width="90">
         </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
