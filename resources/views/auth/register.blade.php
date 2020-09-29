@@ -80,7 +80,7 @@
                     <div class="row justify-content-center">
 
                         <div class="col-md-8">
-                                <div class="card cd col-12">
+                                <div class="card cd col-18">
                                 <div>{{ __('Cadastro') }}</div>
 
 
