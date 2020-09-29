@@ -44,10 +44,12 @@
 
             .title {
                 text-align:Left;
-                font-size: 5.5em;
+                font-size: 3.5em;
                 padding-top:1.5em;
             }
-
+            .text-center {
+                 text-align: center !important;
+            }
         </style>
     </head>
 
