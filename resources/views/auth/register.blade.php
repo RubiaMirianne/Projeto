@@ -1,29 +1,52 @@
 @extends('layouts.app')
 
 @section('content')
+<nav class="navbar navbar-dark bg-faded navbar-expand-md " style="background-color: #971ac2; border-color: #000;">
+
+    <a class="navbar-brand" href="#">
+        <img src="img/aa.png" alt="logo" height="36" width="90">
+        </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item     ">
+                        <a class="navbar-brand" href="{{ url('/') }}">Início</a>
+                    </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/cadastroproduto') }}">Cadastrar Produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#">Lista de Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/financeiro') }}">Financeiro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/quemsomos') }}">Quem Somos</a>
+                </li>
+                <li class="nav-item">
+                    <img src="img/logout.png" height="25" width="25" style="margin-bottom:-1.3em;">
+                </li>
+                </ul>
+            </div>
+            </nav>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Cadastro') }}</div>
+                <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('Cadastro') }}">
+                    <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input type="radio" id="vendedor" name="gender" value="vendedor">
-                                <label for="vendedor">Vendedor</label><br>
-                                @error('vendedor')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
