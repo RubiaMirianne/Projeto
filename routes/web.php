@@ -20,5 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/listacompras', [App\Http\Controllers\HomeController::class, 'index'])->name('listacompras');
-Route::get('/inicioestoquista', [App\Http\Controllers\HomeController::class, 'index'])->name('inicioestoquista');
+Route::get('/listacompras', [App\Http\Controllers\ListaComprasController::class, 'index'])->name('listacompras');
+Route::get('/inicioestoquista', [App\Http\Controllers\InicioEstoquistaController::class, 'index'])->name('inicioestoquista');
