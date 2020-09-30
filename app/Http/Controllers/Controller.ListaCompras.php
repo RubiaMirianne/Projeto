@@ -23,6 +23,6 @@ class ListaComprasController extends Controller
      */
     public function index()
     {
-        return view('Lista Compras');
+        return view('listacompras');
     }
 }

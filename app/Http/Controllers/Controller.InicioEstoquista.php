@@ -23,6 +23,6 @@ class InicioEstoquistaController extends Controller
      */
     public function index()
     {
-        return view('Inicio Estoquista');
+        return view('inicioestoquista');
     }
 }
