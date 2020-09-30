@@ -69,10 +69,10 @@
                     <a class="navbar-brand" href="#">Lista de Produtos</a>
                 </li>
                <li class="nav-item">
-                    <a class="navbar-brand" href="{{ route('/listacompras') }}">Lista Compras</a>
+                    <a class="navbar-brand" href="{{ route('listacompras') }}">Lista Compras</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="{{ route('/inicioestoquista') }}">Inicio Estoquista</a>
+                    <a class="navbar-brand" href="{{ route('inicioestoquista') }}">Inicio Estoquista</a>
                 </li>
                 <li class="nav-item">
                     <img src="img/logout.png" height="25" width="25" style="margin-bottom:-1.3em;">
