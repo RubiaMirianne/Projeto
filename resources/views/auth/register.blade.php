@@ -63,6 +63,30 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/cadastroproduto') }}">Cadastrar Produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#">Lista de Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/financeiro') }}">Financeiro</a>
+                </li><li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/listacompras') }}">Lista Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/inicioestoquista') }}">Inicio Estoquista</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{{ url('/quemsomos') }}">Quem Somos</a>
+                </li>
+                <li class="nav-item">
+                    <img src="img/logout.png" height="25" width="25" style="margin-bottom:-1.3em;">
+                </li>
+                </ul>
+            </div>
             <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
                 @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
