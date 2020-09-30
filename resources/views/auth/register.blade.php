@@ -66,21 +66,21 @@
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="{{ url('/cadastroproduto') }}">Cadastrar Produto</a>
+                    <a class="navbar-brand" href="{{ route('/cadastroproduto') }}">Cadastrar Produto</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand" href="#">Lista de Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="{{ url('/financeiro') }}">Financeiro</a>
+                    <a class="navbar-brand" href="{{ route('/financeiro') }}">Financeiro</a>
                 </li><li class="nav-item">
-                    <a class="navbar-brand" href="{{ url('/listacompras') }}">Lista Compras</a>
+                    <a class="navbar-brand" href="{{ route('/listacompras') }}">Lista Compras</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="{{ url('/inicioestoquista') }}">Inicio Estoquista</a>
+                    <a class="navbar-brand" href="{{ route('/inicioestoquista') }}">Inicio Estoquista</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="{{ url('/quemsomos') }}">Quem Somos</a>
+                    <a class="navbar-brand" href="{{ route('/quemsomos') }}">Quem Somos</a>
                 </li>
                 <li class="nav-item">
                     <img src="img/logout.png" height="25" width="25" style="margin-bottom:-1.3em;">
