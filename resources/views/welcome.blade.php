@@ -78,7 +78,7 @@
                 <div class="container">
                     <h2>Image</h2>
                     <p></p>
-                    <img class="img-fluid" src="img/supermercado" alt="Chania" width="460" height="345">
+                    <img class="img-fluid" src="img/supermercado.jpg" alt="Chania" width="460" height="345">
                 </div>
     </nav>
     </body>
