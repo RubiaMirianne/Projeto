@@ -1,182 +1,127 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        <title>TechMart</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <title>TechMart</title>
 
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #ffffff;
-                font-family: 'Nunito', sans-serif;
-                font-weight: bold;
-                height: 100vh;
-                margin: 0;
-                overflow: hidden;
-            }
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <style>
+        html,
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            color: #ffffff;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            height: 100vh;
+            width: 100vw;
+        }
 
-            .position-ref {
-                position: relative;
-            }
+        .flex-center {
+            display: flex;
+            flex: 1 auto;
+            align-items: center;
+            justify-content: center;
+        }
 
-            .top-right {
-                position: absolute;
+        .cd {
+            border-width: 2px;
+            border-color: #971ac2;
+            background-color: #BE8FCE;
+            padding-bottom: 10em;
+        }
+    </style>
+</head>
 
-            }
-
-            .cd {
-                border-width: 5px;
-                border-color:#971ac2;
-                background-color:#BE8FCE;
-                padding-bottom:10em;
-            }
-
-            .title {
-                text-align:Left;
-                font-size: 3.5em;
-                padding-top:1.5em;
-            }
-            .text-center {
-                 text-align: center !important;
-            }
-
-        </style>
-    </head>
-
-    <body>
-    <nav class="navbar navbar-dark bg-faded navbar-expand-md " style="background-color: #971ac2; border-color: #000;">
-
-    <a class="navbar-brand" href="#">
-        <img src="imagem/aa.png" alt="logo" height="36" width="90">
+<body>
+    <nav class="navbar navbar-dark bg-faded navbar-expand-md " style="background-color: #971ac2; border-color: #000; padding: 20px; margin-bottom: 10px;">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="imagem/aa.png" alt="logo" height="36" width="90">
         </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="#">Lista de Produtos</a>
-                </li>
-               <li class="nav-item">
-                    <a class="navbar-brand" href="{{ route('listacompras') }}">Lista Compras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navbar-brand" href="{{ route('inicioestoquista') }}">Inicio Estoquista</a>
-                </li>
-                <li class="nav-item">
-                    <img src="img/logout.png" height="25" width="25" style="margin-bottom:-1.3em;">
-                </li>
-                </ul>
-            </div>
-            <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/home') }}"class="navbar-brand"class="text-sm text-gray-700 underline">Home</a>
-                        @else
-                            <a href="{{ route('login') }}"class="navbar-brand" class="text-sm text-gray-700 underline">Login</a>
-
-                            @if (Route::has('welcome'))
-                                <a href="{{ route('welcome') }}"class="navbar-brand"class="ml-4 text-sm text-gray-700 underline">Register</a>
-                            @endif
-                        @endif
+    </nav>
+    <main class="flex-center">
+        <div class="col-md-6">
+            <div class="card cd col-12">
+                <h1 class="text-center">Cadastro</h1>
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <div class="form-group-row">
+                        <label for="vendedor" class="col-md-4 col-form-label text-md-right">Vendedor</label>
+                        <input type="radio" id="vendedor" name="tipo_conta" value="vendedor" default>
                     </div>
-                @endif
-                </div>
-    </nav>>
-                <div class="container">
-                    <div class="row justify-content-center">
 
-                        <div class="col-md-8">
-                                <div class="card cd col-12">
-                                <div class="text-center" >{{ __('CADASTRO') }}</div>
+                    <div class="form-group-row">
+                        <label for="estoquista" class="col-md-4 col-form-label text-md-right">Estoquista</label>
+                        <input type="radio" id="estoquista" name="tipo_conta" value="estoquista">
+                    </div>
 
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">Nome</label>
 
-                                    <form method="POST" action="{{ route('register') }}">
-                                        @csrf
-                                        <div class="form-group row">
-                                            <label for="vendedor" class="col-md-4 col-form-label text-md-right">Vendedor</label>
-                                            <input type="radio" id="vendedor" name="cadastro" value="vendedor" default>
-                                        </div>
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                        <div class="form-group row">
-                                            <label for="estoquista" class="col-md-4 col-form-label text-md-right">Estoquista</label>
-                                            <input type="radio" id="estoquista" name="cadastro" value="estoquista">
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                                            <div class="col-md-6">
-                                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                                @error('name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                                            <div class="col-md-6">
-                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                                @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                                            <div class="col-md-6">
-                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                                @error('password')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                                            <div class="col-md-6">
-                                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row mb-0">
-                                            <div class="col-md-6 offset-md-4">
-                                                <button type="submit" class="btn btn-primary">
-                                                    {{ __('Cadastrar') }}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
-                </div>
-        </body>
-    </html>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-md-4 col-form-label text-md-right">E-mail</label>
+                        <div class="col-md-6">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Senha</label>
+
+                        <div class="col-md-6">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirme a senha</label>
+
+                        <div class="col-md-6">
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-0">
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Cadastrar') }}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+
+</html>

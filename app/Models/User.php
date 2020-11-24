@@ -11,13 +11,17 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public function carrinho() {
+        return $this->hasOne('App\Models\Carrinho');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'tipo_conta'
     ];
 
     /**

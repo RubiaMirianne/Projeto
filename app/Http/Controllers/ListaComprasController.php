@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carrinho;
+use App\Models\Produto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ListaComprasController extends Controller
 {
@@ -23,6 +26,8 @@ class ListaComprasController extends Controller
      */
     public function index()
     {
-        return view('listacompras');
+        $produtos = Produto::all();
+        $carrinho = Carrinho::find(Auth::id());
+        return view('listadecompras', compact('produtos', 'carrinho'));
     }
 }
